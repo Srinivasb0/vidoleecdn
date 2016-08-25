@@ -1,0 +1,17 @@
+
+
+
+ 
+ {% if user.is_authenticated %}
+ {% for item in queryset %}
+  {% ifequal created_by user %}
+  <a href="{% url 'resource_update' pk=resource.id %}" class="btn btn-small"><i class="icon-edit"></i> Edit</a> <h1>Add videos</h1>{% endifequal %}
+
+
+<!--<a href='{{ item.get_absolute_url }}'>{{ item }}</a></br>-->
+<a href='{{ item.get_absolute_url }}'>{{ item }}</a> <br/>
+{{user}}
+</div>
+
+{% endfor %}
+{% endif %}

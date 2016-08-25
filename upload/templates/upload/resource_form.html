@@ -1,0 +1,9 @@
+
+
+<p>
+    <a href="{% if request.META.HTTP_REFERER %}{{ request.META.HTTP_REFERER }}{% else %}{% url 'home' %}{% endif %}" class="btn"><i class="icon-double-angle-left"></i> Back</a>
+</p>
+<form action="" method="post" enctype="multipart/form-data"> {% csrf_token %}
+    {% include "upload/form_base_block.html" %}
+    <p><input type='submit' value="upload"</p>
+</form>

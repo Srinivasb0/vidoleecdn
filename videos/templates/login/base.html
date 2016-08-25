@@ -1,0 +1,100 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>{% block head_title %}{% endblock %}vidolee</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <!--<link rel="stylesheet" href="http://mdbootstrap.com/download/templates/bootstrap/free/jumbotron/css/mdb.min.css">-->
+    <link href="{%  static 'css/mdb.min.css' %}" rel="stylesheet">
+    <link href="{%  static 'css/carousel.css' %}" rel="stylesheet">
+    <link href="{%  static 'css/style.css' %}" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Static navbar -->
+	<nav class="navbar navbar-inverse">
+    <!--<nav class="navbar navbar-default navbar-static-top">-->
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img src="http://127.0.0.1:8000/static/img/vidolee-pt-logo.jpg"   alt=""></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+           <li><a href="{% url 'category_list' %}">Categories</a></li>
+          </ul>
+          
+          <ul class="nav navbar-nav navbar-right">
+            {% if user.is_authenticated %}
+             <li><a href="{% url 'logout' %}">Logout   {{user}}</a> </li>
+          {% else %}
+              <li><a href="{% url 'login' %}">Login</a></li>
+          {% endif %}            
+          </ul>             
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    
+   
+				
+
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+	</div>
+      <!-- Main component for a primary marketing message or call to action -->
+      <!--<div class="jumbotron">
+        <h1>Navbar example</h1>
+        <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
+        <p>To see the difference between static and fixed top navbars, just scroll.</p>
+        <p>
+          <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
+        </p>
+      </div>-->
+	  
+	  <!-- FOOTER -->
+      
+      <footer class="site-footer">
+        <div class="container">
+          <div class="row">
+        </div>
+          <div class="bottom-footer">
+            <div class="col-md-5">
+            </div>
+            <div class="col-md-7">
+              <p class="pull-right"><a href="#">Back to top</a></p>
+              <ul class="footer-nav">
+                <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
+                <a href="#"><i class="fa fa-twitter-square fa-2x"></i></a>
+                <a href="#"><i class="fa fa-google-plus-square fa-2x"></i></a>
+				<a href="#"><i class="fa fa-instagram fa-2x"></i></a>
+              </ul>
+              <p>&copy; 2016 vidolee.com. &middot; <a href="#"></a></p>
+            </div>
+          </div>
+          </div>
+      </footer>    
+    {% include 'boot_strap_js.html' %}
+    <script>
+      $(document).ready(function(){
+      });
+    </script>
+  </body>
+</html>

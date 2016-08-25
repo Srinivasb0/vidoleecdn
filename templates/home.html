@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block head_title %} Home|{% endblock %}
+
+
+{% block content %}
+
+<!--<p>{{videos}}</p>-->
+
+<a href="{{ videos.get_absolute_url }}">{{ videos.title }}</a>
+
+{% for videos in videos %}
+
+
+{{videos.embed_code|safe}}
+
+{% endfor %}
+
+
+
+
+{% endblock %}
+

@@ -1,0 +1,90 @@
+{% extends "login/base.html" %}
+
+{% load staticfiles %}
+{% block head_title %} {% endblock %}
+
+<head>
+	<link href="{%  static 'css/style.css' %}" rel="stylesheet">
+</head>
+
+
+
+<script>
+{% block jquery %}
+
+
+function update_iframe_size(){
+	var parent_id = $("iframe").parent().attr("id");
+	if (parent_id == "main_video") {
+		var parent_class = $("iframe").parent().attr("class");
+		var parent_width = $("iframe").parent().width();
+		console.log(parent_class);
+		var width = $("iframe").css("width"); // $("iframe").width();
+		var height = $("iframe").css("height");
+		var ratio = parseInt(height)/parseInt(width);
+		var new_height = parseInt(parent_width) * ratio
+		$("iframe").css("width", parent_width);
+			$("iframe").css("height", new_height);
+	}
+}
+update_iframe_size()
+$(window).bind("resize", function(){
+	// alert("reized");
+	update_iframe_size();
+});
+
+{% endblock %}
+</script>
+
+
+{% block content %}
+<div class="container">
+<div class='row'>
+	<div class="caurosel-bgrnd">
+	<div class="col-md-12">
+		
+		<div class="col-md-1"></div>
+		<div class="col-md-6">
+		
+<iframe width="850" height="520" frameborder="0" allowfullscreen="" {{obj.embed_code|safe}}</iframe>
+
+<br/>
+
+<!-- LikeBtn.com BEGIN -->
+<!--<span class="likebtn-wrapper" data-theme="custom" data-icon_l="thmb7-u" data-icon_d="thmb7-d" data-icon_l_c_v="#05fbec" data-icon_d_c_v="#fb0556" data-white_label="true" data-identifier="item_1"></span>
+<script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script>
+<!-- LikeBtn.com END -->
+</div>
+</div>
+</div>
+	</div>
+</div>
+</div>
+<!--<div class='col-md-3'>
+	<div class="card">
+<a href="#">{{obj.product_img|safe}}</a>
+<a href=" "><img src="static/img/shoe.jpg" alt=""></a>
+
+		<button type="submit" class="btn btn-default">AddToCart</button>
+	</div>
+</div>-->
+
+		<!--<a class="vcjs"><img src="http://www.3ders.org/images2014/shoe-designers-united-nude-exhibit-a-series-of-3d-printed-shoes-2.jpg"   alt=""></a>-->
+</div>
+</div>
+<hr/>
+
+<div class='row'>
+<div class='col-md-12'>
+	<div class="card">
+		{{ obj.product_embed|safe }}		
+		
+	<!--<a href='{{ item.get_absolute_url }}'>{{obj.product_embed|safe}}</a>-->
+<!--<a href="#">{{obj.product_embed|safe}}</a>-->
+</div>
+</div>
+		
+
+{% endblock %}
+
+

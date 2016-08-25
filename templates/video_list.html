@@ -1,0 +1,25 @@
+{% extends "login/base.html" %}
+
+{% block head_title %} {% endblock %}
+
+
+{% block content %}
+
+
+ 
+{% for item in queryset %}
+
+<div class='col-md-3'>
+<div class='card'>
+<!--Card image-->      
+<a href='{{ item.get_absolute_url }}'><img src='{{ item.get_image_url }}' class='img-responsive'/><div class="col-md-10">{{ item }}</div></a>
+</div>
+<div class="card-block">
+</div>
+</div>
+{% endfor %}
+</div>
+</div>
+</div>
+{% endblock %}
+
