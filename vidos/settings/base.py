@@ -26,7 +26,7 @@ SECRET_KEY = '==vmw9obt6p(5)chezhrkb+(t9-h6%q219$58u-d*qbz9hi8*l'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-FULL_DOMAIN_NAME = 'http://www.imaxconsulting.in/'
+
 LOGIN_URL = "/login/"
 
 
@@ -66,6 +66,8 @@ MIDDLEWARE_CLASSES = [
 ]
 
 ROOT_URLCONF = 'vidos.urls'
+WSGI_APPLICATION = 'vidos.wsgi.application'
+
 
 TEMPLATES = [
     {
@@ -85,11 +87,11 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'vidos.wsgi.application'
 
-SOCIAL_AUTH_FACEBOOK_KEY='990787137707230'
-SOCIAL_AUTH_FACEBOOK_SECRET='7101253bd6d8359efbc731b2e8ef2ecd'
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = 'AIzaSyAFtKFhyCyOlsANUsOWDVouRoLt2hceTZY'
+
+#SOCIAL_AUTH_FACEBOOK_KEY='990787137707230'
+#SOCIAL_AUTH_FACEBOOK_SECRET='7101253bd6d8359efbc731b2e8ef2ecd'
+#SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = 'AIzaSyAFtKFhyCyOlsANUsOWDVouRoLt2hceTZY'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
