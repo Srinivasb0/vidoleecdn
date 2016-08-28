@@ -1,1 +1,1 @@
-web: gunicorn vidolee.wsgi
+web: gunicorn vidos.wsgi
