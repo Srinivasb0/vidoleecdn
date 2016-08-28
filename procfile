@@ -1,1 +1,1 @@
-web: gunicorn vidolee.wsgi --log-file -
+web: gunicorn vidolee.wsgi
