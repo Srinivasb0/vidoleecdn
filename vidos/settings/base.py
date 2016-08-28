@@ -97,9 +97,13 @@ TEMPLATES = [
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        #'NAME': 'C:/Users/RAMa2r3e4s5h6/vidoos/vidos/sqlite3.db',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd4dit1e500fis4'
+        'USER': 'szbdhsiaoacqia'
+        'PASSWORD': 'pNFcSKYOP7Aa_L5APmP2EzDmJr'
+        'HOST': 'ec2-54-235-95-188.compute-1.amazonaws.com'
+        'PORT': '5432'
+        
         
     }
 }
