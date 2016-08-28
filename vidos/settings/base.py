@@ -13,8 +13,9 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
+print ("Base_Dir", BASE_DIR)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
@@ -97,7 +98,7 @@ TEMPLATES = [
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'd4dit1e500fis4',
         'USER': 'szbdhsiaoacqia',
         'PASSWORD': 'pNFcSKYOP7Aa_L5APmP2EzDmJr',
@@ -149,13 +150,15 @@ STATIC_URL = '/static/'
 
 
 STATICFILES_DIRS = (
-    os.path.join(os.path.dirname(BASE_DIR), "static", "static_dirs"),
+    os.path.join(BASE_DIR, "static", "static_dirs"),
 )
 
-STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static", "static_root")
+#print ("Static_Files", STATICFILES_DIRS)
+STATIC_ROOT = os.path.join(BASE_DIR, "static", "static_root")
 
+print ("Static_Root", STATIC_ROOT)
 
-MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static", "media_root")
+MEDIA_ROOT = os.path.join(BASE_DIR, "static", "media_root")
 MEDIA_URL = '/media/'
 
 AUTHENTICATION_BACKENDS = (

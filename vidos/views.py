@@ -33,7 +33,7 @@ def home(request):
         
         "videos": videos,
         "the_embeds": embeds,
-        "a_code": mark_safe(video.objects.all()[0].embed_code)        
+        #"a_code": mark_safe(video.objects.all()[0].embed_code)        
     }
     return render(request, "home.html",context)
     #else:
