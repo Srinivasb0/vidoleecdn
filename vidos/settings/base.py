@@ -98,11 +98,11 @@ TEMPLATES = [
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd4dit1e500fis4'
-        'USER': 'szbdhsiaoacqia'
-        'PASSWORD': 'pNFcSKYOP7Aa_L5APmP2EzDmJr'
-        'HOST': 'ec2-54-235-95-188.compute-1.amazonaws.com'
-        'PORT': '5432'
+        'NAME': 'd4dit1e500fis4',
+        'USER': 'szbdhsiaoacqia',
+        'PASSWORD': 'pNFcSKYOP7Aa_L5APmP2EzDmJr',
+        'HOST': 'ec2-54-235-95-188.compute-1.amazonaws.com',
+        'PORT': '5432',
         
         
     }
