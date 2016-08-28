@@ -1,1 +1,1 @@
-web: gunicorn vidos.wsgi --log-file -
+web: gunicorn vidos.wsgi
