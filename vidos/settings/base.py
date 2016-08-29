@@ -25,7 +25,7 @@ SECRET_KEY = '==vmw9obt6p(5)chezhrkb+(t9-h6%q219$58u-d*qbz9hi8*l'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-TEMPLATE_DEBUG = True
+
 
 ALLOWED_HOSTS = ['vidolee.herokuapp.com']
 
@@ -147,7 +147,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
-STATIC_URL = '/https://vidolee.herokuapp.com/static/'
+STATIC_URL = '/static/'
 
 
 STATICFILES_DIRS = (
