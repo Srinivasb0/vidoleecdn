@@ -25,6 +25,7 @@ SECRET_KEY = '==vmw9obt6p(5)chezhrkb+(t9-h6%q219$58u-d*qbz9hi8*l'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = ['vidolee.herokuapp.com']
 
