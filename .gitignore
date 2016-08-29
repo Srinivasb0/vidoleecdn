@@ -6,7 +6,7 @@ __pycache__/
 # C extensions
 # C extensions
 *.so
-
+/vidos/settings/local.py
 # Distribution / packaging
 .Python
 env/

@@ -14,10 +14,10 @@ DATABASES['default'] =  dj_database_url.config()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Allow all host headers
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['vidolee.herokuapp.com']
 
 
-SHARE_URL = "http://vidolee.com/?ref="
+SHARE_URL = "http://vidolee.herokuapp.com/"
 # Static asset configuration
 # import os
 # BASE_DIR = os.path.dirname(os.path.abspath(__file__))
