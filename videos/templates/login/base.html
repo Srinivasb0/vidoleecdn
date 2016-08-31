@@ -35,18 +35,9 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="#"><img src="https://vidolee.herokuapp.com/static/img/vidoleeLogo1.png"   alt=""></a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-           <li><a href="{% url 'category_list' %}">Categories</a></li>
-          </ul>
-          
+        </div>  
           <ul class="nav navbar-nav navbar-right">
-            {% if user.is_authenticated %}
-             <li><a href="{% url 'logout' %}">Logout   {{user}}</a> </li>
-          {% else %}
-              <li><a href="{% url 'login' %}">Login</a></li>
-          {% endif %}            
+             <li><a href="https://vidolee.herokuapp.com/"><button type="button" class="btn btn-default">Home</button></a> </li>            
           </ul>             
         </div><!--/.nav-collapse -->
       </div>
