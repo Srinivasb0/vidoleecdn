@@ -4,11 +4,13 @@
 
 
 {% block content %}
-
+<div class = "col-md-3">
+<div class="card">
 {% for item in queryset %}
 
 <a href='{{ item.get_absolute_url }}'>{{ item }}</a></br>
-
+</div>
+</div>
 
 {% endfor %}
 
