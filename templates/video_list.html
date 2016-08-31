@@ -9,7 +9,7 @@
  
 {% for item in queryset %}
 
-<div class='col-md-3'>
+<div class='col-md-6'>
 <div class='card'>
 <!--Card image-->      
 <a href='{{ item.get_absolute_url }}'><img src='{{ item.get_image_url }}' class='img-responsive'/><div class="col-md-10">{{ item }}</div></a>
