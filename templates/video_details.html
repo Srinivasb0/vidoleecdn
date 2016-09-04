@@ -30,15 +30,15 @@ $(window).bind("resize", function(){
 <div class="container">
 <div class='row'>
 	<div class="col-md-12" id='main_video'>
-		
+		{{obj.embed_code|safe}}
 	</div>
 		
-		<div class="col-md-1"></div>
-		<div class="col-md-6">
+		<!--<div class="col-md-1"></div>
+		<div class="col-md-6">-->
 		
-<iframe width="850" height="520" frameborder="0" allowfullscreen="" {{obj.embed_code|safe}}</iframe>
-		</div>
-</div>
+<!--<iframe width="850" height="520" frameborder="0" allowfullscreen="" {{obj.embed_code|safe}}</iframe>-->
+
+
 
 <!-- LikeBtn.com BEGIN -->
 <!--<span class="likebtn-wrapper" data-theme="custom" data-icon_l="thmb7-u" data-icon_d="thmb7-d" data-icon_l_c_v="#05fbec" data-icon_d_c_v="#fb0556" data-white_label="true" data-identifier="item_1"></span>

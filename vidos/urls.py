@@ -31,7 +31,7 @@ urlpatterns = [
     url(r'^logout/$', views.auth_logout, name='logout'),
     url(r'^login/$', views.auth_login, name='login'),
     url(r'^register/$', views.user_register, name='register'),
-    url(r'', include('webmaster_verification.urls')),
+    #url(r'', include('webmaster_verification.urls')),
     #url(r'^profile/$', MyProfileView.as_view(), name='profile'),
     #url(r'^update/$', UserUpdateView.as_view(), name='update'),
     url(r'^lists/$', 'myaccount.views.list', name='lists'),
