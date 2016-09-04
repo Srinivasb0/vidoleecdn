@@ -4,6 +4,7 @@ Django==1.9.6
 django-braces==1.9.0
 django-filter==0.13.0
 django-guardian==1.4.4
+django-webmaster-verification==0.3.0
 django-widget-tweaks==1.4.1
 django-youtube==0.2
 gdata==2.0.18
