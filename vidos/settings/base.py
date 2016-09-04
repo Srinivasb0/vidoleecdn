@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'webmaster_verification',
     'social.apps.django_app.default',
     'videos',
     'myaccount',
@@ -110,7 +111,13 @@ DATABASES = {
     }
 }
 
-
+WEBMASTER_VERIFICATION = {
+    #'bing': '<bing verification code>',
+    'google': '<google490de29a933d2b95>',
+    #'majestic': '<majestic verification code>',
+    #'yandex': '<yandex verification code>',
+    #'alexa': '<alexa verification code>',
+}
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
 

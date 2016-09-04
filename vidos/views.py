@@ -100,6 +100,11 @@ def user_register(request):
     }
     return render(request, "register.html",context)
 
+def google_Seo(request):
+    return render(request, "google490de29a933d2b95.html")
+    
+    
+    
 
 
 
